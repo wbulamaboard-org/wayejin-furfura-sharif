@@ -5,226 +5,1079 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#063b2b">
 <title>ওয়েজিন ফুরফুরা শরীফ | WAYEJIN FURFURA SHARIF</title>
+
 <style>
-:root{--green:#063b2b;--green2:#0a513b;--gold:#d8b35c;--gold2:#f1d98b;--cream:#f7f3e8;--ink:#10231c;--muted:#66766e;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
-a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
-.top{background:#03251b;color:#dce9e2;text-align:center;padding:9px;font-size:13px;letter-spacing:.3px}.top b{color:var(--gold2)}
-nav{position:sticky;top:0;z-index:20;background:rgba(3,37,27,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(216,179,92,.22)}
-.navin{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}.logo{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold2);font-size:23px;background:#082e22}.brand small{display:block;color:#aebfb7;font-size:10px;letter-spacing:1.4px}.links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.links a{color:#e4eee9;font-size:13px;padding:8px 10px;border-radius:9px}.links a:hover{background:#0b4a36;color:var(--gold2)}
-.hero{background:radial-gradient(circle at 80% 20%,#126044 0,#063b2b 42%,#021d15 100%);color:#fff;padding:90px 0 80px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 60%,rgba(216,179,92,.08));pointer-events:none}.hero .wrap{position:relative;z-index:1}.arabic{font-family:serif;font-size:32px;color:var(--gold2);margin-bottom:15px}.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.05;margin:0 0 12px}.hero h1 span{display:block;color:var(--gold2);font-size:.45em;letter-spacing:3px;margin-top:15px}.hero p{max-width:680px;color:#c6d7cf;font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;border:1px solid var(--gold);padding:12px 19px;border-radius:13px;font-weight:800;cursor:pointer}.gold{background:var(--gold);color:#08261c}.outline{color:#fff;background:transparent}.btn:hover{transform:translateY(-1px)}
-section{padding:76px 0}.head{text-align:center;margin-bottom:34px}.eyebrow{color:#8d6b1e;font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:12px}.head h2{font-size:34px;margin:6px 0}.head p{color:var(--muted);margin:auto;max-width:700px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:#fff;border:1px solid #e4dfd2;border-radius:20px;padding:24px;box-shadow:0 8px 28px rgba(24,49,40,.06)}.card .icon{font-size:30px}.card h3{margin:10px 0 5px}.card p{color:var(--muted);font-size:14px}
-.about{background:#fff}.aboutgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch}.quote{background:var(--green);color:#fff;border-radius:25px;padding:32px}.quote .arabic{font-size:28px}.quote p{color:#d4e1db}.points{display:grid;gap:12px}.point{background:#f8f6ef;border-left:4px solid var(--gold);padding:15px 18px;border-radius:12px}.point b{display:block}
-.leaders{background:#f1eee4}.leadergrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.leader{text-align:center;background:#fff;padding:24px 15px;border-radius:20px;border:1px solid #e1dbca}.avatar{width:70px;height:70px;margin:auto;border-radius:50%;display:grid;place-items:center;background:var(--green);color:var(--gold2);font-size:28px;font-family:serif;border:2px solid var(--gold)}.leader h3{font-size:16px;margin:13px 0 3px}.leader p{font-size:12px;color:var(--muted);margin:0}
-.committee table{width:100%;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden}.committee th,.committee td{padding:14px;border-bottom:1px solid #ece8dc;text-align:left}.committee th{background:var(--green);color:#fff}.committee tr:last-child td{border:0}
-.newsgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.newsitem{background:#fff;padding:22px;border-radius:18px;border:1px solid #e5dfd1}.newsitem b{color:#8b681b;font-size:12px}.newsitem h3{margin:7px 0}.newsitem p{color:var(--muted);font-size:14px}
-.membership{background:linear-gradient(145deg,#03271c,#0a4b37);color:#fff}.membership .head p{color:#bdd0c7}.form{max-width:800px;margin:auto;background:rgba(255,255,255,.055);border:1px solid rgba(216,179,92,.25);border-radius:25px;padding:25px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field.full{grid-column:1/-1}.field label{display:block;font-size:12px;font-weight:800;margin-bottom:6px;color:#dce9e3}.field input,.field select{width:100%;padding:13px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.18);color:#fff;font:inherit;outline:none}.field select option{color:#111}.form .btn{margin-top:18px}.note{font-size:11px;color:#9fb7ac}.success{display:none;margin-top:18px;padding:15px;border-radius:12px;background:rgba(216,179,92,.12);border:1px solid rgba(216,179,92,.35);color:#f1dfaa}
-.verifybox{max-width:620px;margin:auto;display:flex;gap:10px}.verifybox input{flex:1;padding:13px;border:1px solid #ddd4bd;border-radius:12px;background:#fff}.status{margin-top:15px;text-align:center;padding:14px;border-radius:12px;background:#fff;display:none}
-.contact{background:#fff}.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contactbox{background:#f7f4eb;border-radius:20px;padding:25px}.contactbox b{display:block;color:#8b681b;margin-bottom:4px}
-footer{background:#021d15;color:#aebfb7;padding:35px 0;text-align:center}footer strong{color:#f1d98b}footer small{display:block;margin-top:7px}
-@media(max-width:800px){.links{display:none}.grid,.leadergrid{grid-template-columns:1fr 1fr}.aboutgrid,.contactgrid{grid-template-columns:1fr}.newsgrid{grid-template-columns:1fr}.hero{padding:65px 0}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.verifybox{flex-direction:column}}
-@media(max-width:480px){.grid,.leadergrid{grid-template-columns:1fr}.navin{min-height:62px}.brand{font-size:14px}.logo{width:40px;height:40px}.hero h1{font-size:42px}}
+:root{
+--green:#063b2b;
+--green2:#0a513b;
+--gold:#d8b35c;
+--gold2:#f1d98b;
+--cream:#f7f3e8;
+--ink:#10231c;
+--muted:#66766e;
+--white:#fff;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;
+background:var(--cream);
+color:var(--ink);
+line-height:1.65;
+}
+
+a{text-decoration:none;color:inherit}
+
+.wrap{
+width:min(1120px,92%);
+margin:auto;
+}
+
+.top{
+background:#03251b;
+color:#dce9e2;
+text-align:center;
+padding:9px;
+font-size:13px;
+}
+
+.top b{color:var(--gold2)}
+
+nav{
+position:sticky;
+top:0;
+z-index:20;
+background:rgba(3,37,27,.97);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(216,179,92,.25);
+}
+
+.navin{
+min-height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+color:#fff;
+font-weight:800;
+}
+
+.logo{
+width:46px;
+height:46px;
+border-radius:50%;
+display:grid;
+place-items:center;
+border:1px solid var(--gold);
+color:var(--gold2);
+font-size:23px;
+background:#082e22;
+}
+
+.brand small{
+display:block;
+color:#aebfb7;
+font-size:10px;
+letter-spacing:1px;
+}
+
+.links{
+display:flex;
+gap:5px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+.links a{
+color:#e4eee9;
+font-size:13px;
+padding:8px 10px;
+border-radius:9px;
+}
+
+.links a:hover{
+background:#0b4a36;
+color:var(--gold2);
+}
+
+.hero{
+background:radial-gradient(
+circle at 80% 20%,
+#126044 0,
+#063b2b 42%,
+#021d15 100%
+);
+color:#fff;
+padding:90px 0 80px;
+position:relative;
+overflow:hidden;
+}
+
+.hero .wrap{
+position:relative;
+z-index:1;
+}
+
+.arabic{
+font-family:serif;
+font-size:32px;
+color:var(--gold2);
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:clamp(38px,7vw,72px);
+line-height:1.05;
+margin:0 0 12px;
+}
+
+.hero h1 span{
+display:block;
+color:var(--gold2);
+font-size:.45em;
+letter-spacing:3px;
+margin-top:15px;
+}
+
+.hero p{
+max-width:700px;
+color:#c6d7cf;
+font-size:17px;
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:28px;
+}
+
+.btn{
+display:inline-block;
+border:1px solid var(--gold);
+padding:12px 19px;
+border-radius:13px;
+font-weight:800;
+cursor:pointer;
+}
+
+.gold{
+background:var(--gold);
+color:#08261c;
+}
+
+.outline{
+color:#fff;
+background:transparent;
+}
+
+section{
+padding:76px 0;
+}
+
+.head{
+text-align:center;
+margin-bottom:34px;
+}
+
+.eyebrow{
+color:#8d6b1e;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:2px;
+font-size:12px;
+}
+
+.head h2{
+font-size:34px;
+margin:6px 0;
+}
+
+.head p{
+color:var(--muted);
+margin:auto;
+max-width:700px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+}
+
+.card{
+background:#fff;
+border:1px solid #e4dfd2;
+border-radius:20px;
+padding:24px;
+box-shadow:0 8px 28px rgba(24,49,40,.06);
+}
+
+.card .icon{
+font-size:30px;
+}
+
+.card h3{
+margin:10px 0 5px;
+}
+
+.card p{
+color:var(--muted);
+font-size:14px;
+}
+
+.about{
+background:#fff;
+}
+
+.aboutgrid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:28px;
+}
+
+.quote{
+background:var(--green);
+color:#fff;
+border-radius:25px;
+padding:32px;
+}
+
+.quote p{
+color:#d4e1db;
+}
+
+.points{
+display:grid;
+gap:12px;
+}
+
+.point{
+background:#f8f6ef;
+border-left:4px solid var(--gold);
+padding:15px 18px;
+border-radius:12px;
+}
+
+.point b{
+display:block;
+}
+
+.leaders{
+background:#f1eee4;
+}
+
+.leadergrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+}
+
+.leader{
+text-align:center;
+background:#fff;
+padding:24px 15px;
+border-radius:20px;
+border:1px solid #e1dbca;
+}
+
+.avatar{
+width:70px;
+height:70px;
+margin:auto;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:var(--green);
+color:var(--gold2);
+font-size:28px;
+font-family:serif;
+border:2px solid var(--gold);
+}
+
+.leader h3{
+font-size:16px;
+margin:13px 0 3px;
+}
+
+.leader p{
+font-size:12px;
+color:var(--muted);
+margin:0;
+}
+
+.committee table{
+width:100%;
+border-collapse:collapse;
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+}
+
+.committee th,
+.committee td{
+padding:14px;
+border-bottom:1px solid #ece8dc;
+text-align:left;
+}
+
+.committee th{
+background:var(--green);
+color:#fff;
+}
+
+.news{
+background:#fff;
+}
+
+.newsgrid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+}
+
+.newsitem{
+background:#f9f7f0;
+padding:24px;
+border-radius:18px;
+border:1px solid #e5dfd1;
+}
+
+.newsitem .tag{
+display:inline-block;
+background:var(--green);
+color:var(--gold2);
+padding:4px 9px;
+border-radius:20px;
+font-size:11px;
+font-weight:800;
+}
+
+.newsitem h3{
+margin:10px 0 6px;
+}
+
+.newsitem p{
+color:var(--muted);
+font-size:14px;
+}
+
+.gallery{
+background:#f1eee4;
+}
+
+.gallerygrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.photo{
+min-height:150px;
+border-radius:18px;
+background:var(--green);
+color:var(--gold2);
+display:grid;
+place-items:center;
+text-align:center;
+font-weight:800;
+border:1px solid var(--gold);
+}
+
+.photo.big{
+grid-column:span 2;
+grid-row:span 2;
+font-size:25px;
+}
+
+.membership{
+background:linear-gradient(145deg,#03271c,#0a4b37);
+color:#fff;
+}
+
+.membership .head p{
+color:#bdd0c7;
+}
+
+.form{
+max-width:800px;
+margin:auto;
+background:rgba(255,255,255,.055);
+border:1px solid rgba(216,179,92,.25);
+border-radius:25px;
+padding:30px;
+text-align:center;
+}
+
+.form h3{
+font-size:25px;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin:25px 0;
+}
+
+.info-box{
+padding:18px;
+border:1px solid rgba(216,179,92,.3);
+border-radius:15px;
+}
+
+.info-box strong{
+display:block;
+margin-bottom:5px;
+}
+
+.info-box small{
+color:#bdd0c7;
+}
+
+.note{
+font-size:11px;
+color:#9fb7ac;
+margin-top:15px;
+}
+
+.verifybox{
+max-width:620px;
+margin:auto;
+display:flex;
+gap:10px;
+}
+
+.verifybox input{
+flex:1;
+padding:13px;
+border:1px solid #ddd4bd;
+border-radius:12px;
+background:#fff;
+font:inherit;
+}
+
+.status{
+margin-top:15px;
+text-align:center;
+padding:14px;
+border-radius:12px;
+background:#fff;
+display:none;
+}
+
+.contact{
+background:#fff;
+}
+
+.contactgrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.contactbox{
+background:#f7f4eb;
+border-radius:20px;
+padding:25px;
+}
+
+.contactbox b{
+display:block;
+color:#8b681b;
+margin-bottom:5px;
+}
+
+.contactbox a{
+color:var(--green);
+font-weight:700;
+}
+
+footer{
+background:#021d15;
+color:#aebfb7;
+padding:35px 0;
+text-align:center;
+}
+
+footer strong{
+color:#f1d98b;
+}
+
+footer small{
+display:block;
+margin-top:7px;
+}
+
+@media(max-width:800px){
+
+.links{
+display:none;
+}
+
+.grid,
+.leadergrid{
+grid-template-columns:1fr 1fr;
+}
+
+.aboutgrid,
+.contactgrid{
+grid-template-columns:1fr;
+}
+
+.newsgrid{
+grid-template-columns:1fr;
+}
+
+.gallerygrid{
+grid-template-columns:1fr 1fr;
+}
+
+.photo.big{
+grid-column:span 2;
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:65px 0;
+}
+
+.verifybox{
+flex-direction:column;
+}
+
+}
+
+@media(max-width:480px){
+
+.grid,
+.leadergrid,
+.gallerygrid{
+grid-template-columns:1fr;
+}
+
+.photo.big{
+grid-column:auto;
+}
+
+.navin{
+min-height:62px;
+}
+
+.brand{
+font-size:14px;
+}
+
+.logo{
+width:40px;
+height:40px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+}
 </style>
 </head>
+
 <body>
-<div class="top">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ &nbsp; • &nbsp; <b>ঐক্য • শিক্ষা • সমাজ সংস্কার</b></div>
 
-<nav><div class="wrap navin">
-<a class="brand" href="#home"><div class="logo">و</div><div>ওয়েজিন ফুরফুরা শরীফ<small>WAYEJIN FURFURA SHARIF</small></div></a>
-<div class="links"><a href="#about">পরিচিতি</a><a href="#activities">কার্যক্রম</a><a href="#leaders">নেতৃত্ব</a><a href="#committee">কমিটি</a><a href="#news">নিউজ</a><a href="#membership">সদস্যপদ</a><a href="#verify">যাচাই</a></div>
-</div></nav>
+<div class="top">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+&nbsp; • &nbsp;
+<b>ঐক্য • শিক্ষা • সমাজ সংস্কার</b>
+</div>
 
-<header id="home" class="hero"><div class="wrap">
-<div class="arabic">وَقُلْ رَبِّ زِدْنِي عِلْمًا</div>
-<h1>ওয়েজিন ফুরফুরা শরীফ<span>WAYEJIN FURFURA SHARIF</span></h1>
-<p>ইলম, দাওয়াত, উলামা ঐক্য ও সমাজ সংস্কারের একটি সুসংগঠিত ডিজিটাল প্ল্যাটফর্ম।</p>
-<div class="actions"><a class="btn gold" href="#membership">সদস্য হোন ✦</a><a class="btn outline" href="#about">আমাদের সম্পর্কে</a></div>
-</div></header>
+<nav>
+<div class="wrap navin">
 
-<section id="about" class="about"><div class="wrap"><div class="head"><div class="eyebrow">About Us</div><h2>আমাদের পরিচিতি</h2><p>দ্বীনি শিক্ষা, নৈতিক জাগরণ ও সমাজকল্যাণের মাধ্যমে একটি ঐক্যবদ্ধ উলামা সমাজ গড়ে তোলাই আমাদের লক্ষ্য।</p></div>
-<div class="aboutgrid"><div class="quote"><div class="arabic">إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ</div><h3>ঐক্য আমাদের শক্তি</h3><p>উলামায়ে কেরামের পারস্পরিক সহযোগিতা, দ্বীনি শিক্ষা বিস্তার এবং সমাজের কল্যাণে সম্মিলিত উদ্যোগকে আমরা গুরুত্ব দিই।</p></div>
-<div class="points"><div class="point"><b>ইসলামী ঐক্য ও আদর্শ</b>উলামা ও দ্বীনি নেতৃত্বের মধ্যে সহযোগিতা।</div><div class="point"><b>শিক্ষা ও নৈতিক জাগরণ</b>কুরআন, সুন্নাহ ও নৈতিক শিক্ষার প্রসার।</div><div class="point"><b>সমাজসেবা</b>দুঃস্থ ও অসহায় মানুষের পাশে দাঁড়ানো।</div><div class="point"><b>মসজিদ-মাদ্রাসা সুরক্ষা</b>দ্বীনি প্রতিষ্ঠান ও ওয়াকফ সম্পদের সচেতনতা ও আইনসম্মত সুরক্ষা।</div></div></div></div></section>
+<a class="brand" href="#home">
+<div class="logo">و</div>
+<div>
+ওয়েজিন ফুরফুরা শরীফ
+<small>WAYEJIN FURFURA SHARIF</small>
+</div>
+</a>
 
-<section id="activities"><div class="wrap"><div class="head"><div class="eyebrow">Activities</div><h2>আমাদের কার্যক্রম</h2></div>
-<div class="grid"><div class="card"><div class="icon">📖</div><h3>দাওয়াত ও তালিম</h3><p>কুরআন-হাদিস ও নৈতিক শিক্ষার মাধ্যমে জনসচেতনতা।</p></div><div class="card"><div class="icon">🤝</div><h3>উলামা ঐক্য</h3><p>সভা, সম্মেলন ও পারস্পরিক সহযোগিতার উদ্যোগ।</p></div><div class="card"><div class="icon">❤️</div><h3>সমাজসেবা</h3><p>অসহায়, দরিদ্র ও প্রয়োজনমতো মানুষের পাশে দাঁড়ানো।</p></div><div class="card"><div class="icon">🎓</div><h3>শিক্ষা ও প্রশিক্ষণ</h3><p>দ্বীনি শিক্ষা, প্রশিক্ষণ ও দক্ষতা উন্নয়নের উদ্যোগ।</p></div></div></div></section>
+<div class="links">
+<a href="#about">পরিচিতি</a>
+<a href="#activities">কার্যক্রম</a>
+<a href="#leaders">নেতৃত্ব</a>
+<a href="#committee">কমিটি</a>
+<a href="#news">নিউজ</a>
+<a href="#gallery">গ্যালারি</a>
+<a href="#membership">সদস্যপদ</a>
+<a href="#verify">যাচাই</a>
+<a href="#contact">যোগাযোগ</a>
+</div>
 
-<section id="leaders" class="leaders"><div class="wrap"><div class="head"><div class="eyebrow">Leadership</div><h2>নেতৃত্ব</h2></div>
+</div>
+</nav>
+
+<header id="home" class="hero">
+<div class="wrap">
+
+<div class="arabic">
+وَقُلْ رَبِّ زِدْنِي عِلْمًا
+</div>
+
+<h1>
+ওয়েজিন ফুরফুরা শরীফ
+<span>WAYEJIN FURFURA SHARIF</span>
+</h1>
+
+<p>
+ইলম, দাওয়াত, উলামা ঐক্য ও সমাজ সংস্কারের
+একটি সুসংগঠিত ডিজিটাল প্ল্যাটফর্ম।
+</p>
+
+<div class="actions">
+<a class="btn gold" href="#membership">
+সদস্য হোন ✦
+</a>
+
+<a class="btn outline" href="#about">
+আমাদের সম্পর্কে
+</a>
+</div>
+
+</div>
+</header>
+
+<section id="about" class="about">
+<div class="wrap">
+
+<div class="head">
+<div class="eyebrow">About Us</div>
+<h2>আমাদের পরিচিতি</h2>
+<p>
+দ্বীনি শিক্ষা, নৈতিক জাগরণ ও সমাজকল্যাণের মাধ্যমে
+একটি ঐক্যবদ্ধ উলামা সমাজ গড়ে তোলাই আমাদের লক্ষ্য।
+</p>
+</div>
+
+<div class="aboutgrid">
+
+<div class="quote">
+<div class="arabic">
+إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ
+</div>
+
+<h3>ঐক্য আমাদের শক্তি</h3>
+
+<p>
+উলামায়ে কেরামের পারস্পরিক সহযোগিতা,
+দ্বীনি শিক্ষা বিস্তার এবং সমাজের কল্যাণে
+সম্মিলিত উদ্যোগকে আমরা গুরুত্ব দিই।
+</p>
+</div>
+
+<div class="points">
+
+<div class="point">
+<b>ইসলামী ঐক্য ও আদর্শ</b>
+উলামা ও দ্বীনি নেতৃত্বের মধ্যে সহযোগিতা।
+</div>
+
+<div class="point">
+<b>শিক্ষা ও নৈতিক জাগরণ</b>
+কুরআন, সুন্নাহ ও নৈতিক শিক্ষার প্রসার।
+</div>
+
+<div class="point">
+<b>সমাজসেবা</b>
+দুঃস্থ ও অসহায় মানুষের পাশে দাঁড়ানো।
+</div>
+
+<div class="point">
+<b>মসজিদ-মাদ্রাসা সুরক্ষা</b>
+দ্বীনি প্রতিষ্ঠান ও ওয়াকফ সম্পদের
+সচেতনতা ও আইনসম্মত সুরক্ষা।
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="activities">
+<div class="wrap">
+
+<div class="head">
+<div class="eyebrow">Activities</div>
+<h2>আমাদের কার্যক্রম</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📖</div>
+<h3>দাওয়াত ও তালিম</h3>
+<p>কুরআন-হাদিস ও নৈতিক শিক্ষার মাধ্যমে জনসচেতনতা।</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>উলামা ঐক্য</h3>
+<p>সভা, সম্মেলন ও পারস্পরিক সহযোগিতার উদ্যোগ।</p>
+</div>
+
+<div class="card">
+<div class="icon">❤️</div>
+<h3>সমাজসেবা</h3>
+<p>অসহায়, দরিদ্র ও প্রয়োজনমতো মানুষের পাশে দাঁড়ানো।</p>
+</div>
+
+<div class="card">
+<div class="icon">🎓</div>
+<h3>শিক্ষা ও প্রশিক্ষণ</h3>
+<p>দ্বীনি শিক্ষা, প্রশিক্ষণ ও দক্ষতা উন্নয়নের উদ্যোগ।</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="leaders" class="leaders">
+<div class="wrap">
+
+<div class="head">
+<div class="eyebrow">Leadership</div>
+<h2>নেতৃত্ব</h2>
+<p>অনুমোদিত নেতৃত্বের তথ্য এখানে প্রকাশ করা যাবে।</p>
+</div>
+
 <div class="leadergrid">
-<div class="leader"><div class="avatar">م</div><h3>পীরজাদা আল্লামা মেহরাব উদ্দিন সিদ্দিকী</h3><p>Controller • Furfura Sharif</p></div>
-<div class="leader"><div class="avatar">ي</div><h3>মুফতি ইউনুস আলী ফাতেহী</h3><p>State President</p></div>
-<div class="leader"><div class="avatar">ج</div><h3>মাওলানা জামাত আলী</h3><p>Chief Director & Advisor</p></div>
-<div class="leader"><div class="avatar">ا</div><h3>মাওলানা আমানুল্লাহ আমান</h3><p>Director</p></div>
-</div></div></section>
 
-<section id="committee" class="committee"><div class="wrap"><div class="head"><div class="eyebrow">Organization</div><h2>সাংগঠনিক কাঠামো</h2></div>
-<table><tr><th>স্তর</th><th>দায়িত্ব</th><th>কাজ</th></tr><tr><td>State</td><td>রাজ্য কমিটি</td><td>সামগ্রিক পরিকল্পনা ও সমন্বয়</td></tr><tr><td>District</td><td>জেলা কমিটি</td><td>জেলা পর্যায়ে কার্যক্রম</td></tr><tr><td>Block</td><td>ব্লক কমিটি</td><td>স্থানীয় সংগঠন ও সদস্যসংযোগ</td></tr><tr><td>Wazein</td><td>ওয়েজিন/উলামা</td><td>দাওয়াত, তালিম ও সমাজসেবা</td></tr></table></div></section>
+<div class="leader">
+<div class="avatar">م</div>
+<h3>পীরজাদা আল্লামা মেহরাব উদ্দিন সিদ্দিকী</h3>
+<p>Controller • Furfura Sharif</p>
+</div>
 
-<section id="news"><div class="wrap"><div class="head"><div class="eyebrow">News & Notice</div><h2>নিউজ ও নোটিশ</h2></div>
-<div class="newsgrid"><div class="newsitem"><b>NOTICE</b><h3>সদস্যপদ নিবন্ধন</h3><p>অনলাইন মেম্বারশিপ ফর্মের মাধ্যমে আবেদন করুন।</p></div><div class="newsitem"><b>ACTIVITY</b><h3>উলামা ঐক্য ও আলোচনা</h3><p>দ্বীনি শিক্ষা ও সমাজ সংস্কারকে কেন্দ্র করে কার্যক্রম।</p></div><div class="newsitem"><b>UPDATE</b><h3>ডিজিটাল প্ল্যাটফর্ম</h3><p>সদস্য যাচাই ও সাংগঠনিক তথ্য ধাপে ধাপে যুক্ত করা হচ্ছে।</p></div></div></div></section>
+<div class="leader">
+<div class="avatar">ي</div>
+<h3>মুফতি ইউনুস আলী ফাতেহী</h3>
+<p>State President</p>
+</div>
+
+<div class="leader">
+<div class="avatar">ج</div>
+<h3>মাওলানা জামাত আলী</h3>
+<p>Chief Director & Advisor</p>
+</div>
+
+<div class="leader">
+<div class="avatar">ا</div>
+<h3>মাওলানা আমানুল্লাহ আমান</h3>
+<p>Director</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="committee" class="committee">
+<div class="wrap">
+
+<div class="head">
+<div class="eyebrow">Organization</div>
+<h2>সাংগঠনিক কাঠামো</h2>
+</div>
+
+<table>
+<tr>
+<th>স্তর</th>
+<th>দায়িত্ব</th>
+<th>কাজ</th>
+</tr>
+
+<tr>
+<td>State</td>
+<td>রাজ্য কমিটি</td>
+<td>সামগ্রিক পরিকল্পনা ও সমন্বয়</td>
+</tr>
+
+<tr>
+<td>District</td>
+<td>জেলা কমিটি</td>
+<td>জেলা পর্যায়ে কার্যক্রম</td>
+</tr>
+
+<tr>
+<td>Block</td>
+<td>ব্লক কমিটি</td>
+<td>স্থানীয় সংগঠন ও সদস্যসংযোগ</td>
+</tr>
+
+<tr>
+<td>Wazein</td>
+<td>ওয়েজিন/উলামা</td>
+<td>দাওয়াত, তালিম ও সমাজসেবা</td>
+</tr>
+
+</table>
+</div>
+</section>
+
+<section id="news" class="news">
+<div class="wrap">
+
+<div class="head">
+<div class="eyebrow">News & Notice</div>
+<h2>নিউজ • নোটিশ • আপডেট</h2>
+<p>
+ওয়েজিন ফুরফুরা শরীফের অফিসিয়াল সংবাদ,
+নোটিশ ও গুরুত্বপূর্ণ কার্যক্রমের তথ্য।
+</p>
+</div>
+
+<div class="newsgrid">
+
+<div class="newsitem">
+<span class="tag">NOTICE</span>
+<h3>সদস্যপদ নিবন্ধন চালু</h3>
+<p>
+অনলাইন সদস্যপদ ফর্মের মাধ্যমে সদস্য হিসেবে আবেদন করা যাবে।
+</p>
+</div>
+
+<div class="newsitem">
+<span class="tag">UPDATE</span>
+<h3>Member ID যাচাই</h3>
+<p>
+সদস্যদের Member ID যাচাই ব্যবস্থা ধাপে ধাপে উন্নত করা হচ্ছে।
+</p>
+</div>
+
+<div class="newsitem">
+<span class="tag">PROGRAM</span>
+<h3>উলামা ঐক্য ও সমাজসেবা</h3>
+<p>
+দ্বীনি শিক্ষা, উলামা ঐক্য ও সমাজকল্যাণমূলক
+কার্যক্রমের তথ্য এখানে প্রকাশ করা হবে।
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="gallery" class="gallery">
+<div class="wrap">
+
+<div class="head">
+<div class="eyebrow">Gallery</div>
+<h2>ছবি • অনুষ্ঠান • স্মৃতি</h2>
+<p>
+অফিসিয়াল অনুষ্ঠান ও কার্যক্রমের ছবি এখানে প্রকাশ করা যাবে।
+</p>
+</div>
+
+<div class="gallerygrid">
+
+<div class="photo big">
+☪
+<br>
+<small>Official Gallery</small>
+</div>
+
+<div class="photo">EVENT</div>
+<div class="photo">MEETING</div>
+<div class="photo">ULAMA</div>
+<div class="photo">ACTIVITY</div>
+
+</div>
+</div>
+</section>
 
 <section id="membership" class="membership">
 <div class="wrap">
+
 <div class="head">
-<div class="eyebrow" style="color:var(--gold)">MEMBERSHIP</div>
-<h2>সদস্যপদ নিবন্ধন</h2>
-<p>WAYEJIN FURFURA SHARIF-এর অফিসিয়াল পূর্ণাঙ্গ সদস্যপদ আবেদন ফর্ম</p>
+<div class="eyebrow" style="color:var(--gold)">
+MEMBERSHIP
 </div>
 
-<div class="form" style="text-align:center">
-
-<div class="arabic">خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ</div>
-
-<h3 style="font-size:25px;margin:12px 0">
-ওয়েজিন ফুরফুরা শরীফ
-</h3>
+<h2>সদস্যপদ নিবন্ধন</h2>
 
 <p>
-সদস্যপদের জন্য সম্পূর্ণ তথ্য পূরণ করতে নিচের বাটনে চাপুন।
+WAYEJIN FURFURA SHARIF-এর অফিসিয়াল
+সদস্যপদ আবেদন ফর্ম।
+</p>
+</div>
+
+<div class="form">
+
+<div class="arabic">
+خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ
+</div>
+
+<h3>ওয়েজিন ফুরফুরা শরীফ</h3>
+
+<p>
+সদস্যপদের জন্য সম্পূর্ণ তথ্য পূরণ করতে
+নিচের বাটনে চাপুন।
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0">
+<div class="info-grid">
 
-<div style="padding:18px;border:1px solid rgba(216,179,92,.3);border-radius:15px">
-<strong>যোগাযোগের তথ্য</strong><br>
+<div class="info-box">
+<strong>যোগাযোগের তথ্য</strong>
 <small>মোবাইল • WhatsApp • Email • ঠিকানা</small>
 </div>
 
-<div style="padding:18px;border:1px solid rgba(216,179,92,.3);border-radius:15px">
-<strong>শিক্ষা ও পরিচয়</strong><br>
+<div class="info-box">
+<strong>শিক্ষা ও পরিচয়</strong>
 <small>মাদ্রাসা • যোগ্যতা • পেশা • ID Proof</small>
 </div>
 
-<div style="padding:18px;border:1px solid rgba(216,179,92,.3);border-radius:15px">
-<strong>সদস্যের তথ্য</strong><br>
+<div class="info-box">
+<strong>সদস্যের তথ্য</strong>
 <small>ছবি • জরুরি যোগাযোগ • অন্যান্য তথ্য</small>
 </div>
 
 </div>
 
-<a class="btn gold"
+<a
+class="btn gold"
 href="https://script.google.com/macros/s/AKfycbxkHHlw_SguKGpJac_T-9CuMDBOAgMfYdfT8CXvMgKO6I7g73qOzF2e3mE2lpTxxVt1Tg/exec"
 target="_blank"
-rel="noopener">
+rel="noopener"
+>
 সম্পূর্ণ মেম্বারশিপ ফর্ম খুলুন ↗
 </a>
 
 <p class="note">
-এই বাটনে চাপলে আপনার Google Apps Script-এর পূর্ণাঙ্গ Membership Form খুলবে।
+এই বাটনে চাপলে আপনার Google Apps Script-এর
+পূর্ণাঙ্গ Membership Form খুলবে।
 </p>
 
 </div>
 </div>
 </section>
 
-<section id="verify"><div class="wrap"><div class="head"><div class="eyebrow">Verification</div><h2>Member ID যাচাই</h2><p>আপনার সদস্যপদ নম্বর যাচাই করার জন্য নিচের ঘরটি ব্যবহার করুন।</p></div>
-<div class="verifybox"><input id="verifyID" placeholder="যেমন: WFS-2026-0001"><button class="btn gold" onclick="verifyMember()">যাচাই করুন</button></div><div id="status" class="status"></div></div></section>
+<section id="verify">
+<div class="wrap">
 
-<section class="contact"><div class="wrap"><div class="head"><div class="eyebrow">Contact</div><h2>যোগাযোগ</h2></div><div class="contactgrid"><div class="contactbox"><b>WAYEJIN FURFURA SHARIF</b>West Bengal • India<br>উলামা ঐক্য, শিক্ষা ও সমাজ সংস্কারের ডিজিটাল প্ল্যাটফর্ম</div><div class="contactbox"><b>Official Purpose</b>সদস্যপদ, সাংগঠনিক তথ্য, নোটিশ ও সমাজকল্যাণমূলক কার্যক্রমের জন্য এই প্ল্যাটফর্ম।</div></div></div></section>
-
-<footer><div class="wrap"><strong>ওয়েজিন ফুরফুরা শরীফ</strong><small>WAYEJIN FURFURA SHARIF • ঐক্য • শিক্ষা • সমাজ সংস্কার</small></div></footer>
-
-<script>
-document.getElementById("memberForm").addEventListener("submit",function(){
-  setTimeout(function(){document.getElementById("success").style.display="block"},700);
-});
-function verifyMember(){
-  const id=document.getElementById("verifyID").value.trim().toUpperCase();
-  const s=document.getElementById("status");s.style.display="block";
-  if(!id)s.innerHTML="⚠️ অনুগ্রহ করে Member ID লিখুন।";
-  else s.innerHTML="ℹ️ Member ID যাচাইয়ের পূর্ণ ডাটাবেস সংযোগ Apps Script-এর response/lookup ব্যবস্থা অনুযায়ী সম্পন্ন হবে।";
-}
-</script>
-</body></html><div class="top">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ &nbsp; • &nbsp; <b>ঐক্য • শিক্ষা • সমাজ সংস্কার</b></div>
-<nav><div class="wrap navin">
-<a class="brand" href="#"><span class="seal">☪</span><span>ওয়েজিন ফুরফুরা শরীফ<small>WAYEJIN FURFURA SHARIF</small></span></a>
-<div class="navlinks"><a href="#about">পরিচিতি</a><a href="#activities">কার্যক্রম</a><a href="#leaders">নেতৃত্ব</a><a href="#committee">কমিটি</a><a href="#news">নিউজ</a><a href="#membership">সদস্যপদ</a><a href="#verify">যাচাই</a></div>
-<button class="menu" onclick="alert('মোবাইলে নিচের বিভাগগুলো ব্যবহার করতে পারেন।')">☰</button>
-</div></nav>
-
-<header class="hero"><div class="wrap">
-<div>
-<div class="kicker">ফুরফুরা শরীফের উলামায়ে কেরামের ঐক্য</div>
-<div class="arabic">وَقُلْ رَبِّ زِدْنِي عِلْمًا</div>
-<h1>ওয়েজিন<br>ফুরফুরা শরীফ</h1><div class="en">WAYEJIN FURFURA SHARIF</div>
-<p>ঐক্য • শিক্ষা • সমাজ সংস্কার<br><small>দ্বীন, জ্ঞান ও মানবিক খেদমতের একটি আধুনিক ডিজিটাল প্ল্যাটফর্ম।</small></p>
-<a class="btn gold" href="#membership">সদস্য হোন ↗</a><a class="btn outline" href="#about">আমাদের পরিচয়</a>
+<div class="head">
+<div class="eyebrow">Verification</div>
+<h2>Member ID যাচাই</h2>
+<p>
+আপনার সদস্যপদ নম্বর যাচাই করার জন্য নিচের ঘরটি ব্যবহার করুন।
+</p>
 </div>
-<div class="hero-art"><div class="emblem"></div><h3>দ্বীন • ঐক্য • খেদমত</h3><p>উলামায়ে কেরামের যোগাযোগ, সংগঠন, শিক্ষা ও সমাজকল্যাণমূলক কার্যক্রমকে এক জায়গায় তুলে ধরার পরিকল্পিত প্ল্যাটফর্ম।</p></div>
-</div></header>
 
-<section id="about" class="about"><div class="wrap">
-<div class="head"><div class="eyebrow">Official Introduction</div><h2>একটি পরিচয় • একটি ঐক্য</h2><p>আদর্শ, শিক্ষা, পারস্পরিক সহযোগিতা ও সমাজসেবার মূল্যবোধকে সামনে রেখে একটি সুন্দর সংগঠিত প্ল্যাটফর্ম।</p></div>
-<div class="grid2"><div class="card"><h3 style="color:var(--g)">আমাদের লক্ষ্য</h3><p>উলামায়ে কেরামের মধ্যে যোগাযোগ ও সহযোগিতা বৃদ্ধি, দ্বীনি ও নৈতিক শিক্ষার প্রসার এবং সমাজের কল্যাণে সম্মিলিত উদ্যোগকে উৎসাহিত করা।</p><div class="quote">“ঐক্য শক্তি, শিক্ষা আলো, সমাজ সংস্কার আমাদের অঙ্গীকার।”</div></div>
-<div class="card darkcard"><h3>আমাদের মূলনীতি</h3><p>সততা, জ্ঞান, শৃঙ্খলা, পারস্পরিক সম্মান ও মানুষের কল্যাণ—এই মূল্যবোধের ভিত্তিতে কার্যক্রম সাজানো হবে।</p><p>এই সাইটে পরবর্তীতে অনুমোদিত নীতিমালা, সংবিধান, প্রকল্প ও অফিসিয়াল নোটিশ প্রকাশ করা যাবে।</p></div></div>
-<div class="stats"><div class="stat"><b>01</b><span>ঐক্য</span></div><div class="stat"><b>02</b><span>শিক্ষা</span></div><div class="stat"><b>03</b><span>সমাজ সংস্কার</span></div><div class="stat"><b>04</b><span>খেদমত</span></div></div>
-</div></section>
+<div class="verifybox">
 
-<section id="activities"><div class="wrap"><div class="head"><div class="eyebrow">Programs</div><h2>কার্যক্রম ও উদ্যোগ</h2><p>আপনাদের বাস্তব কার্যক্রম অনুযায়ী এই বিভাগগুলো পরে সম্পাদনা করা যাবে।</p></div>
-<div class="cards4"><div class="activity"><div class="icon">☾</div><h3>দাওয়াত ও তালিম</h3><p>দ্বীনি শিক্ষা, তালিম ও নৈতিক জাগরণের উদ্যোগ।</p></div><div class="activity"><div class="icon">◈</div><h3>উলামা ঐক্য</h3><p>উলামায়ে কেরামের যোগাযোগ, আলোচনা ও সমন্বয়।</p></div><div class="activity"><div class="icon">♧</div><h3>সমাজসেবা</h3><p>মানবিক সহায়তা ও জনকল্যাণমূলক কর্মসূচি।</p></div><div class="activity"><div class="icon">✦</div><h3>শিক্ষা ও প্রশিক্ষণ</h3><p>কুরআন, দ্বীনি জ্ঞান ও দক্ষতা উন্নয়নের উদ্যোগ।</p></div></div></div></section>
+<input
+id="verifyID"
+placeholder="যেমন: WFS-2026-0001"
+>
 
-<section id="leaders" class="leaders"><div class="wrap"><div class="head"><div class="eyebrow">Leadership</div><h2>নেতৃত্ব</h2><p>নিচের নামগুলো বর্তমান ডিজাইন কাঠামোর নমুনা—চূড়ান্ত প্রকাশের আগে আপনার অনুমোদিত তালিকা বসাতে হবে।</p></div>
-<div class="leadergrid">
-<div class="leader"><div class="avatar">م</div><h3>পীরজাদা আল্লামা মেহরাব উদ্দিন সিদ্দিকী</h3><p>Controller • Furfura Sharif</p></div>
-<div class="leader"><div class="avatar">ي</div><h3>মুফতি ইউনুস আলী ফাতেহী</h3><p>State President</p></div>
-<div class="leader"><div class="avatar">ج</div><h3>মাওলানা জামাত আলী</h3><p>Chief Director & Advisor</p></div>
-<div class="leader"><div class="avatar">أ</div><h3>মাওলানা আমানুল্লাহ আমান</h3><p>Director</p></div>
-</div></div></section>
+<button class="btn gold" onclick="verifyMember()">
+যাচাই করুন
+</button>
 
-<section id="committee" class="committee"><div class="wrap"><div class="head"><div class="eyebrow">Organization</div><h2>সাংগঠনিক কাঠামো</h2><p>রাজ্য থেকে জেলা ও ব্লক পর্যায়ে অনুমোদিত তথ্য এখানে প্রকাশ করা যাবে।</p></div>
-<div class="tablewrap"><table class="table"><tr><th>স্তর</th><th>দায়িত্ব</th><th>তথ্য</th></tr><tr><td>State</td><td>রাজ্য পরিচালনা</td><td>Official State Committee</td></tr><tr><td>District</td><td>জেলা সমন্বয়</td><td>District Committee</td></tr><tr><td>Block</td><td>ব্লক পর্যায়ের কার্যক্রম</td><td>Block Committee</td></tr><tr><td>Wazein</td><td>দাওয়াত ও বক্তব্য</td><td>Wazein Directory</td></tr></table></div></div></section>
+</div>
 
-<section id="news" class="news"><div class="wrap"><div class="head"><div class="eyebrow">News & Notice</div><h2>নিউজ • নোটিশ • আপডেট</h2><p>ভবিষ্যতে অফিসিয়াল সভা, সম্মেলন, নোটিশ ও কার্যক্রম এখানে প্রকাশ করা যাবে।</p></div>
-<div class="newsgrid"><div class="newsitem"><span class="tag">NOTICE</span><h3>সদস্য নিবন্ধন কার্যক্রম</h3><p>অনলাইনে সদস্যপদের আবেদন ও ডিজিটাল Member ID ব্যবস্থার পরিকল্পনা।</p></div><div class="newsitem"><span class="tag">PROGRAM</span><h3>উলামা ঐক্য ও আলোচনা</h3><p>আলোচনা সভা ও সাংগঠনিক কার্যক্রমের তথ্য এখানে প্রকাশ করা যাবে।</p></div><div class="newsitem"><span class="tag">UPDATE</span><h3>ডিজিটাল ভেরিফিকেশন</h3><p>QR ও Member ID ভিত্তিক যাচাই ব্যবস্থা উন্নয়নের পরিকল্পনা।</p></div></div></div></section>
+<div id="status" class="status"></div>
 
-<section class="gallery"><div class="wrap"><div class="head"><div class="eyebrow">Gallery</div><h2>ছবি • অনুষ্ঠান • স্মৃতি</h2><p>আপনার অনুষ্ঠান ও অফিসিয়াল ছবিগুলো দিলে এখানে সুন্দর Gallery তৈরি করা যাবে।</p></div><div class="gallerygrid"><div class="photo big">☪<br><small>Official Gallery</small></div><div class="photo">EVENT</div><div class="photo">MEETING</div><div class="photo">ULAMA</div><div class="photo">ACTIVITY</div></div></div></section>
-
-<section id="membership" class="membership"><div class="wrap"><div class="head"><div class="eyebrow" style="color:var(--gold)">Membership</div><h2>সদস্যপদ নিবন্ধন</h2><p>এটি বর্তমানে একটি ডেমো Member ID ব্যবস্থা।</p></div>
-<div class="form"><div class="fields"><div class="online" style="text-align:center;margin-bottom:18px">
-<a class="btn gold" href="https://script.google.com/macros/s/AKfycbxkHHlw_SguKGpJac_T-9CuMDBOAgMfYdfT8CXvMgKO6I7g73qOzF2e3mE2lpTxxVt1Tg/exec" target="_blank">অনলাইন মেম্বারশিপ ফর্ম খুলুন ↗</a>
-<p class="note">অনলাইন আবেদন করতে এই বাটনে চাপুন।</p>
-</div><div class="field"><label>পূর্ণ নাম *</label><input id="name" placeholder="আপনার নাম"></div><div class="field"><label>মোবাইল *</label><input id="phone" inputmode="numeric" placeholder="মোবাইল নম্বর"></div><div class="field"><label>জেলা *</label><input id="district" placeholder="জেলার নাম"></div><div class="field"><label>পদ / পরিচয়</label><input id="role" placeholder="Wazein / Aalim / Member"></div><div class="field full"><label>ইমেইল (ঐচ্ছিক)</label><input id="email" type="email" placeholder="Email address"></div></div><button class="btn gold" onclick="makeID()">Member ID তৈরি করুন ✦</button><p class="note">গুরুত্বপূর্ণ: এই ডেমোতে তথ্য এই ব্রাউজারে থাকে। সত্যিকারের Online Database, Admin Approval এবং নিরাপদ cross-device verification পরের ধাপে Google Sheets/Apps Script দিয়ে যুক্ত করতে হবে।</p>
-<div id="result" class="result"><div class="idcard"><div class="idtop"><div><strong>ওয়েজিন ফুরফুরা শরীফ</strong><br><small>WAYEJIN FURFURA SHARIF</small></div><div style="color:var(--gold2)">MEMBER</div></div><div class="idbody"><div class="idav" id="initial">و</div><div class="meta"><b id="cardName"></b><br>ID: <span id="cardID"></span><br>District: <span id="cardDistrict"></span><br>Role: <span id="cardRole"></span></div><div class="qr"><img id="qr" alt="QR"></div></div><div style="text-align:center;color:var(--gold2);font-size:11px">ঐক্য • শিক্ষা • সমাজ সংস্কার</div></div><div style="text-align:center"><button class="btn gold" onclick="window.print()">Print / Save PDF</button></div></div></div>
-</div></section>
-
-<section id="verify" class="verify"><div class="wrap"><div class="head"><div class="eyebrow">Verification Portal</div><h2>Member Verification</h2><p>Member ID দিয়ে ডেমো যাচাই করুন।</p></div><div class="verifybox card"><input id="verifyID" placeholder="WFS-2026-0001"><button class="btn gold" onclick="verifyMember()">Verify Member</button><div id="status" class="status"></div></div></div></section>
-
-<section class="contact">
-  <div class="wrap">
-    <div class="head">
-      <div class="eyebrow">Contact</div>
-      <h2>যোগাযোগ করুন</h2>
-      <p>WAYEJIN FURFURA SHARIF-এর সঙ্গে যোগাযোগের জন্য নিচের তথ্য ব্যবহার করুন।</p>
-    </div>
-
-    <div class="contactgrid">
-      <div class="contactbox">
-        <h3>📞 ফোন</h3>
-        <p><a href="tel:9144098006">9144098006</a></p>
-      </div>
-
-      <div class="contactbox">
-        <h3>✉️ ইমেইল</h3>
-        <p><a href="mailto:wbulamaboard@gmail.com">wbulamaboard@gmail.com</a></p>
-      </div>
-    </div>
-  </div>
+</div>
 </section>
 
-<footer><div class="foot">ওয়েজিন ফুরফুরা শরীফ<small>WAYEJIN FURFURA SHARIF</small></div><div>ঐক্য • শিক্ষা • সমাজ সংস্কার</div><div class="copy">© 2026 WayeJin Furfura Sharif • Official Digital Platform</div></footer>
+<section id="contact" class="contact">
+<div class="wrap">
+
+<div class="head">
+<div class="eyebrow">Contact</div>
+<h2>যোগাযোগ</h2>
+<p>ওয়েজিন ফুরফুরা শরীফের সঙ্গে যোগাযোগ করুন।</p>
+</div>
+
+<div class="contactgrid">
+
+<div class="contactbox">
+<b>📞 ফোন</b>
+<a href="tel:9144098006">9144098006</a>
+
+<br><br>
+
+<b>✉️ ইমেইল</b>
+<a href="mailto:wbulamaboard@gmail.com">
+wbulamaboard@gmail.com
+</a>
+</div>
+
+<div class="contactbox">
+<b>WAYEJIN FURFURA SHARIF</b>
+West Bengal • India
+
+<br><br>
+
+উলামা ঐক্য, শিক্ষা ও সমাজ সংস্কারের
+ডিজিটাল প্ল্যাটফর্ম।
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+
+<strong>ওয়েজিন ফুরফুরা শরীফ</strong>
+
+<small>
+WAYEJIN FURFURA SHARIF
+•
+ঐক্য • শিক্ষা • সমাজ সংস্কার
+</small>
+
+</div>
+</footer>
 
 <script>
-function members(){try{return JSON.parse(localStorage.getItem("wfs_members")||"{}")}catch(e){return{}}}
-function makeID(){
- let name=document.getElementById("name").value.trim(),phone=document.getElementById("phone").value.trim(),district=document.getElementById("district").value.trim(),role=document.getElementById("role").value.trim()||"Member";
- if(!name||!phone||!district){alert("নাম, মোবাইল ও জেলা পূরণ করুন।");return}
- let ms=members(),n=Object.keys(ms).length+1,id="WFS-2026-"+String(n).padStart(4,"0");while(ms[id]){n++;id="WFS-2026-"+String(n).padStart(4,"0")}
- ms[id]={id,name,phone,district,role,email:document.getElementById("email").value.trim(),created:new Date().toISOString()};localStorage.setItem("wfs_members",JSON.stringify(ms));
- document.getElementById("cardName").textContent=name;document.getElementById("cardID").textContent=id;document.getElementById("cardDistrict").textContent=district;document.getElementById("cardRole").textContent=role;document.getElementById("initial").textContent=name[0];
- document.getElementById("qr").src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data="+encodeURIComponent(location.href.split("#")[0]+"#verify="+id);
- document.getElementById("result").style.display="block";document.getElementById("verifyID").value=id;document.getElementById("result").scrollIntoView({behavior:"smooth",block:"center"});
+
+function verifyMember(){
+
+const id =
+document.getElementById("verifyID").value.trim().toUpperCase();
+
+const status =
+document.getElementById("status");
+
+status.style.display="block";
+
+if(!id){
+
+status.innerHTML =
+"⚠️ অনুগ্রহ করে Member ID লিখুন।";
+
+return;
 }
-function verifyMember(){let id=document.getElementById("verifyID").value.trim().toUpperCase(),m=members()[id],s=document.getElementById("status");s.style.display="block";if(m)s.innerHTML="✅ <b>Member Found</b><br>"+m.name+" — "+m.district+" — "+m.role+"<br><small>Local demo verification</small>";else s.innerHTML="❌ <b>Member ID পাওয়া যায়নি</b><br>সঠিক ID লিখে আবার চেষ্টা করুন।"}
-window.addEventListener("load",()=>{if(location.hash.startsWith("#verify=")){document.getElementById("verifyID").value=decodeURIComponent(location.hash.slice(8));document.getElementById("verify").scrollIntoView({behavior:"smooth"})}});
+
+status.innerHTML =
+"ℹ️ Member ID যাচাই ব্যবস্থা Google Apps Script-এর ডাটাবেসের সঙ্গে সংযুক্ত করা হবে।";
+
+}
+
 </script>
-</body></html>
+
+</body>
+</html>
