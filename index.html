@@ -1053,8 +1053,6 @@ WAYEJIN FURFURA SHARIF
 </footer>
 
 <script>
-
-<script>
 function verifyMember(){
 
   const id = document.getElementById("verifyID").value.trim();
@@ -1076,7 +1074,10 @@ function verifyMember(){
   window.open(verifyURL, "_blank");
 
 }
-</script>
+const verifyURL =
+  scriptURL + "?verify=" + encodeURIComponent(id);
+
+window.location.href = verifyURL;
 
 
 </html>
