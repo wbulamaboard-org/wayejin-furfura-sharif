@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wazeen Registration — WAYEJIN E-FURFURA SHARIF</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f6f4eb;color:#18352d}
+.top{background:#064c3c;color:#fff;padding:18px 16px}.wrap{max-width:760px;margin:auto}
+.brand{font-size:13px;letter-spacing:1px;opacity:.9}.title{font-size:30px;font-weight:800;margin:8px 0 4px;color:#d9b95b}.sub{font-size:14px;opacity:.85}
+.card{background:#fff;margin:24px auto;padding:24px;border-radius:18px;box-shadow:0 8px 28px #00000012}
+h2{margin-top:0}.notice{background:#fff8df;border-left:4px solid #d9b95b;padding:12px;border-radius:8px;margin-bottom:18px;font-size:14px}
+label{display:block;font-weight:700;margin:15px 0 7px}input,textarea,select{width:100%;padding:13px;border:1px solid #d8ddd9;border-radius:9px;font-size:15px;background:#fff}textarea{min-height:90px;resize:vertical}
+button{width:100%;margin-top:20px;padding:14px;border:0;border-radius:10px;background:#d9b95b;color:#18352d;font-size:17px;font-weight:800;cursor:pointer}
+.small{font-size:12px;color:#69756f;margin-top:12px;line-height:1.5}.success{display:none;background:#e8f7ef;border:1px solid #9dd4b5;padding:15px;border-radius:10px;margin-top:18px}
+a{color:#0b6b52;font-weight:700}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<div class="brand">WAYEJIN E-FURFURA SHARIF</div>
+<div class="title">ওয়েজিন নিবন্ধন</div>
+<div class="sub">Official Wazeen Registration</div>
+</div></header>
+
+<main class="wrap">
+<section class="card">
+<h2>Registration Form</h2>
+<div class="notice">অনুগ্রহ করে সঠিক তথ্য দিন। Submit করার পর WhatsApp-এ আপনার দেওয়া তথ্যসহ একটি মেসেজ তৈরি হবে। তারপর Send চাপলেই নিবন্ধনের তথ্য নির্ধারিত নম্বরে যাবে।</div>
+
+<form id="regForm">
+<label>পূর্ণ নাম *</label>
+<input name="name" required placeholder="আপনার পূর্ণ নাম">
+
+<label>মোবাইল নম্বর *</label>
+<input name="mobile" type="tel" required placeholder="10 সংখ্যার মোবাইল নম্বর">
+
+<label>জেলা *</label>
+<input name="district" required placeholder="যেমন: South 24 Parganas">
+
+<label>ব্লক / এলাকা *</label>
+<input name="area" required placeholder="ব্লক / থানা / এলাকা">
+
+<label>শিক্ষাগত যোগ্যতা</label>
+<input name="education" placeholder="শিক্ষাগত যোগ্যতা">
+
+<label>ওয়াজ / দাওয়াতের অভিজ্ঞতা</label>
+<textarea name="experience" placeholder="অভিজ্ঞতা সংক্ষেপে লিখুন"></textarea>
+
+<label>বর্তমান ঠিকানা</label>
+<textarea name="address" placeholder="সম্পূর্ণ ঠিকানা"></textarea>
+
+<button type="submit">WhatsApp-এ Registration পাঠান</button>
+<div id="success" class="success">WhatsApp খোলা হয়েছে। সেখানে <b>Send</b> চাপুন।</div>
+<div class="small">* চিহ্নিত ঘরগুলো পূরণ করা আবশ্যক। আপনার ফোনে WhatsApp ইনস্টল থাকা প্রয়োজন।</div>
+</form>
+</section>
+</main>
+
+<script>
+const receiver="919732111888";
+document.getElementById("regForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const f=new FormData(this);
+ const msg =
+"WAYEJIN E-FURFURA SHARIF — WAZEEN REGISTRATION%0A%0A"+
+"পূর্ণ নাম: "+encodeURIComponent(f.get("name"))+"%0A"+
+"মোবাইল: "+encodeURIComponent(f.get("mobile"))+"%0A"+
+"জেলা: "+encodeURIComponent(f.get("district"))+"%0A"+
+"ব্লক/এলাকা: "+encodeURIComponent(f.get("area"))+"%0A"+
+"শিক্ষাগত যোগ্যতা: "+encodeURIComponent(f.get("education")||"উল্লেখ নেই")+"%0A"+
+"অভিজ্ঞতা: "+encodeURIComponent(f.get("experience")||"উল্লেখ নেই")+"%0A"+
+"বর্তমান ঠিকানা: "+encodeURIComponent(f.get("address")||"উল্লেখ নেই");
+window.open("https://wa.me/"+receiver+"?text="+msg,"_blank");
+document.getElementById("success").style.display="block";
+});
+</script>
+</body>
+</html>
