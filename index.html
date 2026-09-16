@@ -1054,8 +1054,29 @@ WAYEJIN FURFURA SHARIF
 
 <script>
 
+<script>
 function verifyMember(){
 
+  const id = document.getElementById("verifyID").value.trim();
+
+  const status = document.getElementById("status");
+
+  if(!id){
+    status.style.display = "block";
+    status.innerHTML = "⚠️ অনুগ্রহ করে Member ID লিখুন।";
+    return;
+  }
+
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxkHHlw_SguKGpJac_T-9CuMDBOAgMfYdfT8CXvMgKO6I7g73qOzF2e3mE2lpTxxVt1Tg/exec";
+
+  const verifyURL =
+    scriptURL + "?verify=" + encodeURIComponent(id);
+
+  window.open(verifyURL, "_blank");
+
+}
+</script>
 const id =
 document.getElementById("verifyID").value.trim().toUpperCase();
 
