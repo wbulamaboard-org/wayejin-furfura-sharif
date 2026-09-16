@@ -4,365 +4,100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wazeen Registration - WAYEJIN FURFURA SHARIF</title>
-
 <style>
 *{box-sizing:border-box}
-
-body{
-margin:0;
-font-family:Arial,"Noto Sans Bengali",sans-serif;
-background:#f6f4eb;
-color:#18352d;
-}
-
-.header{
-background:#064c3c;
-color:white;
-padding:22px 18px;
-}
-
-.container{
-max-width:760px;
-margin:auto;
-}
-
-.brand{
-font-size:13px;
-letter-spacing:1px;
-opacity:.9;
-}
-
-.title{
-font-size:28px;
-font-weight:800;
-color:#d9b95b;
-margin-top:7px;
-}
-
-.subtitle{
-font-size:14px;
-margin-top:4px;
-opacity:.85;
-}
-
-.card{
-background:white;
-margin:25px auto;
-padding:24px;
-border-radius:18px;
-box-shadow:0 8px 28px rgba(0,0,0,.08);
-}
-
-h2{
-margin-top:0;
-font-size:22px;
-}
-
-.notice{
-background:#fff8df;
-border-left:4px solid #d9b95b;
-padding:13px;
-border-radius:8px;
-font-size:14px;
-line-height:1.6;
-margin-bottom:20px;
-}
-
-label{
-display:block;
-font-weight:700;
-margin:16px 0 7px;
-}
-
-input,textarea{
-width:100%;
-padding:13px;
-border:1px solid #d8ddd9;
-border-radius:9px;
-font-size:15px;
-font-family:inherit;
-}
-
-textarea{
-min-height:90px;
-resize:vertical;
-}
-
-button{
-width:100%;
-margin-top:22px;
-padding:15px;
-border:0;
-border-radius:10px;
-background:#d9b95b;
-color:#18352d;
-font-size:17px;
-font-weight:800;
-cursor:pointer;
-}
-
-button:disabled{
-opacity:.6;
-}
-
-.success{
-display:none;
-background:#e8f7ef;
-border:1px solid #9dd4b5;
-padding:16px;
-border-radius:10px;
-margin-top:18px;
-line-height:1.7;
-}
-
-.error{
-display:none;
-background:#fff0f0;
-border:1px solid #e0aaaa;
-padding:15px;
-border-radius:10px;
-margin-top:18px;
-color:#8a2222;
-}
-
-.small{
-font-size:12px;
-color:#69756f;
-margin-top:12px;
-line-height:1.5;
-}
-
-a{
-color:#0b6b52;
-font-weight:700;
-}
+body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f6f4eb;color:#18352d}
+.header{background:#064c3c;color:#fff;padding:22px 18px}
+.container{max-width:760px;margin:auto}
+.brand{font-size:13px;letter-spacing:1px;opacity:.9}
+.title{font-size:28px;font-weight:800;color:#d9b95b;margin-top:7px}
+.subtitle{font-size:14px;opacity:.85;margin-top:4px}
+.card{background:#fff;margin:25px auto;padding:24px;border-radius:18px;box-shadow:0 8px 28px rgba(0,0,0,.08)}
+h2{margin-top:0;font-size:22px}
+.notice{background:#fff8df;border-left:4px solid #d9b95b;padding:13px;border-radius:8px;font-size:14px;line-height:1.6;margin-bottom:20px}
+label{display:block;font-weight:700;margin:16px 0 7px}
+input,textarea{width:100%;padding:13px;border:1px solid #d8ddd9;border-radius:9px;font-size:15px;font-family:inherit}
+textarea{min-height:90px;resize:vertical}
+button{width:100%;margin-top:22px;padding:15px;border:0;border-radius:10px;background:#d9b95b;color:#18352d;font-size:17px;font-weight:800}
+button:disabled{opacity:.6}
+.success{display:none;background:#e8f7ef;border:1px solid #9dd4b5;padding:16px;border-radius:10px;margin-top:18px;line-height:1.7}
+.error{display:none;background:#fff0f0;border:1px solid #e0aaaa;padding:15px;border-radius:10px;margin-top:18px;color:#8a2222}
+.small{font-size:12px;color:#69756f;margin-top:12px}
+a{color:#0b6b52;font-weight:700}
 </style>
 </head>
-
 <body>
+<header class="header"><div class="container">
+<div class="brand">WAYEJIN FURFURA SHARIF</div>
+<div class="title">ওয়েজিন নিবন্ধন</div>
+<div class="subtitle">Official Wazeen Registration</div>
+</div></header>
 
-<header class="header">
-<div class="container">
-
-<div class="brand">
-WAYEJIN FURFURA SHARIF
-</div>
-
-<div class="title">
-ওয়েজিন নিবন্ধন
-</div>
-
-<div class="subtitle">
-Official Wazeen Registration
-</div>
-
-</div>
-</header>
-
-
-<main class="container">
-
-<section class="card">
-
+<main class="container"><section class="card">
 <h2>Wazeen Registration Form</h2>
-
-<div class="notice">
-আপনার দেওয়া তথ্য সরাসরি কেন্দ্রীয় Google Sheets Database-এ সংরক্ষিত হবে।
-নিবন্ধন সফল হলে একটি Application Number দেওয়া হবে।
-</div>
-
+<div class="notice">আপনার দেওয়া তথ্য সরাসরি কেন্দ্রীয় Google Sheets Database-এ সংরক্ষিত হবে। নিবন্ধন সফল হলে একটি Application Number দেওয়া হবে।</div>
 
 <form id="regForm">
+<label>পূর্ণ নাম *</label><input type="text" name="name" required placeholder="আপনার পূর্ণ নাম">
+<label>পিতার নাম</label><input type="text" name="father" placeholder="পিতার নাম">
+<label>মোবাইল নম্বর *</label><input type="tel" name="mobile" required placeholder="10 সংখ্যার মোবাইল নম্বর">
+<label>WhatsApp নম্বর</label><input type="tel" name="whatsapp" placeholder="WhatsApp নম্বর">
+<label>জেলা *</label><input type="text" name="district" required placeholder="যেমন: South 24 Parganas">
+<label>ব্লক / এলাকা *</label><input type="text" name="block" required placeholder="ব্লক / থানা / এলাকা">
+<label>বর্তমান ঠিকানা</label><textarea name="address" placeholder="সম্পূর্ণ ঠিকানা"></textarea>
+<label>শিক্ষাগত যোগ্যতা</label><input type="text" name="education" placeholder="শিক্ষাগত যোগ্যতা">
+<label>প্রতিষ্ঠান / মাদ্রাসার নাম</label><input type="text" name="institution" placeholder="প্রতিষ্ঠানের নাম">
+<label>ওয়াজ / দাওয়াতের অভিজ্ঞতা</label><textarea name="experience" placeholder="অভিজ্ঞতা সংক্ষেপে লিখুন"></textarea>
 
-<label>পূর্ণ নাম *</label>
-<input
-type="text"
-name="name"
-required
-placeholder="আপনার পূর্ণ নাম">
-
-
-<label>পিতার নাম</label>
-<input
-type="text"
-name="father"
-placeholder="পিতার নাম">
-
-
-<label>মোবাইল নম্বর *</label>
-<input
-type="tel"
-name="mobile"
-required
-placeholder="10 সংখ্যার মোবাইল নম্বর">
-
-
-<label>WhatsApp নম্বর</label>
-<input
-type="tel"
-name="whatsapp"
-placeholder="WhatsApp নম্বর">
-
-
-<label>জেলা *</label>
-<input
-type="text"
-name="district"
-required
-placeholder="যেমন: South 24 Parganas">
-
-
-<label>ব্লক / এলাকা *</label>
-<input
-type="text"
-name="block"
-required
-placeholder="ব্লক / থানা / এলাকা">
-
-
-<label>বর্তমান ঠিকানা</label>
-<textarea
-name="address"
-placeholder="সম্পূর্ণ ঠিকানা"></textarea>
-
-
-<label>শিক্ষাগত যোগ্যতা</label>
-<input
-type="text"
-name="education"
-placeholder="শিক্ষাগত যোগ্যতা">
-
-
-<label>প্রতিষ্ঠান / মাদ্রাসার নাম</label>
-<input
-type="text"
-name="institution"
-placeholder="প্রতিষ্ঠানের নাম">
-
-
-<label>ওয়াজ / দাওয়াতের অভিজ্ঞতা</label>
-<textarea
-name="experience"
-placeholder="অভিজ্ঞতা সংক্ষেপে লিখুন"></textarea>
-
-
-<button id="submitBtn" type="submit">
-Registration Submit করুন
-</button>
-
-
+<button id="submitBtn" type="submit">Registration Submit করুন</button>
 <div id="success" class="success"></div>
-
 <div id="error" class="error"></div>
-
-<div class="small">
-* চিহ্নিত ঘরগুলো পূরণ করা আবশ্যক।
-</div>
-
+<div class="small">* চিহ্নিত ঘরগুলো পূরণ করা আবশ্যক।</div>
 </form>
-
-</section>
-
-</main>
-
+</section></main>
 
 <script>
+const API="https://script.google.com/macros/s/AKfycbwSxUaa1FKHM4xXFauCApz5aT1usl11-BAAQ9OULwL1uGd8G_78Qh6JhJEcFo1kJz6UWw/exec";
+const form=document.getElementById("regForm");
+const button=document.getElementById("submitBtn");
+const success=document.getElementById("success");
+const error=document.getElementById("error");
 
-const API =
-"https://script.google.com/macros/s/AKfycbxIeUkPYV7hpYRO3HAhDPn_ggYFofeC2mnHGB9nN-WGZCK4mFltXSmmtXKgJA1gh-_RCQ/exec";
-
-
-document
-.getElementById("regForm")
-.addEventListener("submit", async function(e){
-
+form.addEventListener("submit",async function(e){
 e.preventDefault();
-
-const button =
-document.getElementById("submitBtn");
-
-const success =
-document.getElementById("success");
-
-const error =
-document.getElementById("error");
-
-button.disabled = true;
-button.innerText = "তথ্য সংরক্ষণ হচ্ছে...";
-
-success.style.display = "none";
-error.style.display = "none";
-
-
-const formData =
-new FormData(this);
-
-const data =
-Object.fromEntries(formData.entries());
-
+button.disabled=true;
+button.innerText="তথ্য সংরক্ষণ হচ্ছে...";
+success.style.display="none";
+error.style.display="none";
 
 try{
+const data=Object.fromEntries(new FormData(form).entries());
+const response=await fetch(API,{method:"POST",body:JSON.stringify(data)});
+const result=await response.json();
 
-const response =
-await fetch(API,{
-method:"POST",
-body:JSON.stringify(data)
-});
+if(!result.ok) throw new Error(result.error||"Registration failed");
 
+const applicationNo=result.application_no||result.applicationNo||result.app_no;
+if(!applicationNo) throw new Error("Application number missing");
 
-const result =
-await response.json();
+localStorage.setItem("last_application_no",applicationNo);
 
+success.innerHTML="<b>নিবন্ধন সফল হয়েছে!</b><br><br>"+
+"Application No: <b>"+applicationNo+"</b><br>"+
+"Status: <b>"+(result.status||"PENDING")+"</b><br><br>"+
+"<a href='verification.html?id="+encodeURIComponent(applicationNo)+"'>Verification দেখতে এখানে চাপুন</a>";
 
-if(result.ok){
-
-localStorage.setItem(
-"last_application_no",
-result.application_no
-);
-
-
-success.innerHTML =
-"<b>নিবন্ধন সফল হয়েছে!</b><br><br>"+
-"Application No: <b>"+
-result.application_no+
-"</b><br>"+
-"Status: <b>PENDING</b><br><br>"+
-"<a href='verification.html?id="+
-encodeURIComponent(result.application_no)+
-"'>Verification দেখতে এখানে চাপুন</a>";
-
-
-success.style.display = "block";
-
-this.reset();
-
-button.innerText =
-"Registration Submit করুন";
-
-}else{
-
-throw new Error("Registration failed");
-
-}
+success.style.display="block";
+form.reset();
 
 }catch(err){
-
-error.innerHTML =
-"তথ্য সংরক্ষণ করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।";
-
-error.style.display = "block";
-
-button.disabled = false;
-
-button.innerText =
-"Registration Submit করুন";
-
+error.innerHTML="তথ্য সংরক্ষণ করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।";
+error.style.display="block";
 }
 
+button.disabled=false;
+button.innerText="Registration Submit করুন";
 });
-
 </script>
-
 </body>
 </html>
