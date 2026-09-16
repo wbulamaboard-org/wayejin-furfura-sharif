@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>হোম | WAYEJIN E-FURFURA SHARIF</title><style>
+<title>ওয়েজিন ডিরেক্টরি | WAYEJIN E-FURFURA SHARIF</title><style>
 :root{--green:#073f31;--green2:#0d5a45;--gold:#d7b45b;--cream:#f7f4ea;--ink:#17251f;--muted:#69756f;--white:#fff;--line:#e1e7e3}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",Arial,sans-serif;background:#fbfcfb;color:var(--ink)}
 a{text-decoration:none;color:inherit}.wrap{max-width:1160px;margin:auto;padding:0 20px}
@@ -23,17 +23,13 @@ footer{background:#062d23;color:#d6dfdb;padding:38px 0;font-size:12px}.footer-gr
 <header><div class="wrap nav"><a class="brand" href="index.html"><span class="seal">و</span><span><b>ওয়েজিন ফুরফুরা শরীফ</b><small>WAYEJIN E-FURFURA SHARIF</small></span></a>
 <nav><a href="index.html">হোম</a><a href="registration.html">নিবন্ধন</a><a href="verification.html">ভেরিফিকেশন</a><a href="wazeens.html">ওয়েজিন</a><a href="news-events.html">নিউজ ও ইভেন্ট</a><a href="admin.html">অ্যাডমিন</a></nav></div></header>
 
-<section class="hero"><div class="wrap"><div class="eyebrow">OFFICIAL DIGITAL PLATFORM</div>
-<h1>ওয়েজিন ফুরফুরা শরীফ<br><span>WAYEJIN E-FURFURA SHARIF</span></h1>
-<p>ওয়েজিনদের নিবন্ধন, যাচাই, অফিসিয়াল ডিজিটাল পরিচয়, QR Verification, প্রোফাইল, নিউজ ও ইভেন্ট—একটি সুসংগঠিত ডিজিটাল প্ল্যাটফর্মে।</p>
-<div class="actions"><a class="btn gold" href="registration.html">ওয়েজিন নিবন্ধন →</a><a class="btn outline" href="verification.html">Wazeen ID যাচাই</a></div></div></section>
-<section><div class="wrap"><div class="section-head"><div class="eyebrow">CORE SYSTEM</div><h2>একটি সম্পূর্ণ সংযুক্ত ব্যবস্থা</h2><p class="muted">Application থেকে Official Verification পর্যন্ত।</p></div>
-<div class="grid"><div class="card"><div class="icon">📝</div><h3>নিবন্ধন</h3><p class="muted">ডিজিটাল ফর্ম পূরণ করে আবেদন নম্বর সংগ্রহ।</p></div>
-<div class="card"><div class="icon">🪪</div><h3>Official Wazeen ID</h3><p class="muted">অনুমোদনের পর ইউনিক Wazeen ID ও ডিজিটাল পরিচয়।</p></div>
-<div class="card"><div class="icon">⌁</div><h3>QR Verification</h3><p class="muted">ID বা QR ব্যবহার করে অফিসিয়াল রেকর্ড যাচাই।</p></div></div></div></section>
-<section class="cream"><div class="wrap"><div class="split"><div class="green-panel"><h2>ঐক্য • শিক্ষা • সমাজ সংস্কার</h2><p>উলামা ঐক্য, দ্বীনি শিক্ষা, নৈতিক জাগরণ এবং সমাজসেবামূলক উদ্যোগকে ডিজিটালভাবে সংগঠিত করার লক্ষ্য।</p></div>
-<div class="panel"><h3>প্ল্যাটফর্মের সুবিধা</h3><p class="muted">• Wazeen Directory<br>• Public Verification<br>• Digital Profile<br>• News & Events<br>• Admin Management<br>• Mobile Responsive Design</p></div></div></div></section>
-<section><div class="wrap"><div class="section-head"><div class="eyebrow">START HERE</div><h2>আপনার প্রয়োজনীয় সেবা</h2></div><div class="grid"><a class="card" href="registration.html"><div class="icon">📝</div><h3>Wazeen Registration</h3><p class="muted">নতুন আবেদন শুরু করুন।</p></a><a class="card" href="verification.html"><div class="icon">🔎</div><h3>Verify Wazeen</h3><p class="muted">Wazeen ID যাচাই করুন।</p></a><a class="card" href="wazeens.html"><div class="icon">👥</div><h3>Wazeen Directory</h3><p class="muted">অনুমোদিত ওয়েজিনদের তালিকা দেখুন।</p></a></div></div></section>
+<section><div class="wrap"><div class="section-head"><div class="eyebrow">WAZEEN DIRECTORY</div><h2>অনুমোদিত ওয়েজিন</h2><p class="muted">নাম, জেলা বা Wazeen ID দিয়ে খুঁজুন।</p></div>
+<div class="search"><input id="q" placeholder="নাম / জেলা / Wazeen ID"><button class="btn dark" onclick="load()">Search</button></div><div id="list" class="grid"></div></div></section>
 
 <footer><div class="wrap footer-grid"><div><b>WAYEJIN E-FURFURA SHARIF</b><p>ঐক্য • শিক্ষা • সমাজ সংস্কার</p><p class="muted">ফ্রি GitHub Pages সংস্করণ — কোনো paid hosting প্রয়োজন নেই।</p></div><div><b class="gold">দ্রুত লিংক</b><p><a href="registration.html">ওয়েজিন নিবন্ধন</a></p><p><a href="verification.html">আইডি ভেরিফিকেশন</a></p></div><div><b class="gold">প্ল্যাটফর্ম</b><p><a href="wazeens.html">ওয়েজিন ডিরেক্টরি</a></p><p><a href="news-events.html">নিউজ ও ইভেন্ট</a></p></div></div></footer>
-</body></html>
+<script>
+const demo=[{wazeen_id:'WEFS/WZ/2026/000001',name:'Demo Wazeen',district:'South 24 Parganas',block:'Basanti',qualification:'Islamic Studies',status:'VERIFIED'}];
+function load(){let q=document.getElementById('q').value.toLowerCase();let local=JSON.parse(localStorage.getItem('wefs_wazeens')||'[]');let rows=[...local,...demo].filter(x=>!q||JSON.stringify(x).toLowerCase().includes(q));document.getElementById('list').innerHTML=rows.map(w=>`<div class="card"><span class="badge">VERIFIED</span><h3>${w.name}</h3><div class="id">${w.wazeen_id}</div><p class="muted">${w.district||'-'} • ${w.block||'-'}<br>${w.qualification||'-'}</p><a class="btn light" href="verification.html?id=${encodeURIComponent(w.wazeen_id)}">Verify →</a></div>`).join('')||'<div class="panel">কোনো রেকর্ড পাওয়া যায়নি।</div>'}
+load();
+const p=new URLSearchParams(location.search).get('q');if(p){document.getElementById('q').value=p;load()}
+</script></body></html>
