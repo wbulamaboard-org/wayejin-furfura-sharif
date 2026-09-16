@@ -1062,20 +1062,25 @@ document.getElementById("verifyID").value.trim().toUpperCase();
 const status =
 document.getElementById("status");
 
-status.style.display="block";
-
 if(!id){
+
+status.style.display="block";
 
 status.innerHTML =
 "⚠️ অনুগ্রহ করে Member ID লিখুন।";
 
 return;
-}
-
-status.innerHTML =
-"ℹ️ Member ID যাচাই ব্যবস্থা Google Apps Script-এর ডাটাবেসের সঙ্গে সংযুক্ত করা হবে।";
 
 }
+
+const verificationURL =
+"https://script.google.com/macros/s/AKfycbxkHHlw_SguKGpJac_T-9CuMDBOAgMfYdfT8CXvMgKO6I7g73qOzF2e3mE2lpTxxVt1Tg/exec?verifyId="
++ encodeURIComponent(id);
+
+window.open(verificationURL,"_blank");
+
+}
+
 
 </script>
 
