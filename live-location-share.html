@@ -1,11 +1,65 @@
-<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Live Location Share | WAYEJIN FURFURA SHARIF</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f5f6f4;color:#18352d}.wrap{max-width:620px;margin:auto;padding:24px 16px}.card{background:#fff;border-radius:18px;box-shadow:0 8px 28px #0001;overflow:hidden}.head{background:#064c3c;color:#fff;padding:22px}.head h1{margin:0;color:#d9b95b;font-size:25px}.body{padding:22px}.status{padding:13px;border-radius:10px;background:#f3f6f4;margin:12px 0}.btn{width:100%;padding:14px;border:0;border-radius:10px;margin-top:12px;font-weight:800;font-size:16px;background:#d9b95b;color:#18352d}.stop{background:#eee;color:#7a2222}.muted{color:#69756f;font-size:13px;line-height:1.6}.ok{color:#14613d;font-weight:800}.err{color:#8a2222;font-weight:800}</style></head><body><main class="wrap"><section class="card"><div class="head"><h1>📍 Live Location</h1><div>WAYEJIN FURFURA SHARIF</div></div><div class="body"><h2 id="name">Member</h2><div id="status" class="status">Status পরীক্ষা হচ্ছে...</div><p class="muted">আপনার অনুমতি ছাড়া location চালু হবে না। চালু করলে আপনার সর্বশেষ অবস্থান বোর্ডের Live Location Map-এ দেখা যাবে। Location বন্ধ করলে নতুন update পাঠানো বন্ধ হবে।</p><button id="start" class="btn">▶ Live Location চালু করুন</button><button id="stop" class="btn stop">■ Location বন্ধ করুন</button><p class="muted">নির্ভুল update-এর জন্য এই পেজটি খোলা রাখুন। মোবাইল ব্রাউজার background-এ গেলে update বন্ধ/দেরি হতে পারে।</p></div></section></main><script>window.WEFS_LOCATION_API="https://script.google.com/macros/s/AKfycbwU4b_3e8r8dglJHcIqVAKk_fjWfdexUJEVKbCcv5tfkSInlOqgDwYoKwtwGSIiiJv5/exec";</script><script>
-const s=document.getElementById("status"),start=document.getElementById("start"),stop=document.getElementById("stop"),member=(()=>{try{return JSON.parse(sessionStorage.getItem("wefs_member")||"null")}catch(e){return null}})();
-if(!member||!member.wazeen_id){location.href="member-login.html";throw new Error("LOGIN_REQUIRED")}
-document.getElementById("name").textContent=member.name||member.wazeen_id;
-let timer=null,sharing=false;
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Live Location Share | WAYEJIN FURFURA SHARIF</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f5f6f4;color:#18352d}.wrap{max-width:620px;margin:auto;padding:24px 16px}.card{background:#fff;border-radius:18px;box-shadow:0 8px 28px #0001;overflow:hidden}.head{background:#064c3c;color:#fff;padding:22px}.head h1{margin:0;color:#d9b95b;font-size:25px}.body{padding:22px}.status{padding:13px;border-radius:10px;background:#f3f6f4;margin:12px 0}.btn{width:100%;padding:14px;border:0;border-radius:10px;margin-top:12px;font-weight:800;font-size:16px;background:#d9b95b;color:#18352d}.stop{background:#eee;color:#7a2222}.muted{color:#69756f;font-size:13px;line-height:1.6}.ok{color:#14613d;font-weight:800}.err{color:#8a2222;font-weight:800}</style></head><body><main class="wrap"><section class="card"><div class="head"><h1>📍 Live Location</h1><div>WAYEJIN FURFURA SHARIF</div></div><div class="body"><h2 id="name">Member</h2><div id="status" class="status">Status পরীক্ষা হচ্ছে...</div><p class="muted">আপনার অনুমতি ছাড়া location চালু হবে না। চালু করলে আপনার সর্বশেষ অবস্থান বোর্ডের Live Location Map-এ দেখা যাবে। Location বন্ধ করলে নতুন update পাঠানো বন্ধ হবে।</p><button id="start" class="btn">▶ Live Location চালু করুন</button><button id="stop" class="btn stop">■ Location বন্ধ করুন</button><p class="muted">নির্ভুল update-এর জন্য এই পেজটি খোলা রাখুন। মোবাইল ব্রাউজার background-এ গেলে update বন্ধ/দেরি হতে পারে।</p></div></section></main><script>window.WEFS_LOCATION_API="https://script.google.com/macros/s/AKfycbwU4b_3e8r8dglJHcIqVAKk_fjWfdexUJEVKbCcv5tfkSInlOqgDwYoKwtwGSIiiJv5/exec";</script><div id="loginBox" style="display:none;margin-top:14px;padding:14px;border:1px solid #e2e6e3;border-radius:12px;background:#fbfcfb">
+<label style="display:block;font-weight:800;margin-bottom:7px">Member ID</label>
+<input id="loginId" placeholder="WBUB/WF/0007/26" style="width:100%;padding:12px;border:1px solid #d7ddd9;border-radius:9px">
+<label style="display:block;font-weight:800;margin:12px 0 7px">Registered Mobile Number</label>
+<input id="loginMobile" inputmode="numeric" placeholder="10 সংখ্যার মোবাইল নম্বর" style="width:100%;padding:12px;border:1px solid #d7ddd9;border-radius:9px">
+<button id="loginBtn" class="btn">Login করে Live Location চালু করুন</button>
+</div><script src="member-config.js"></script>
+<script>
+const s=document.getElementById("status"),start=document.getElementById("start"),stop=document.getElementById("stop"),loginBox=document.getElementById("loginBox"),loginBtn=document.getElementById("loginBtn");
+let member=null,timer=null,sharing=false;
+try{member=JSON.parse(sessionStorage.getItem("wefs_member")||"null")}catch(e){member=null}
 function msg(t,c){s.className="status "+(c||"");s.textContent=t}
-async function post(action,extra={}){const r=await fetch(window.WEFS_LOCATION_API,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},body:new URLSearchParams({action,member_id:member.wazeen_id,mobile:member.mobile||"",...extra})});return r.json()}
-function sendLocation(){if(!navigator.geolocation){msg("এই মোবাইলে Location support নেই।","err");return}navigator.geolocation.getCurrentPosition(async p=>{try{const o=await post("location_update",{lat:p.coords.latitude,lng:p.coords.longitude,accuracy:Math.round(p.coords.accuracy||0)});if(!o.ok)throw Error(o.message||"Update failed");msg("Location চালু আছে • শেষ update: "+new Date(o.updated_at).toLocaleString("bn-IN"),"ok")}catch(e){msg(e.message||"Location update ব্যর্থ হয়েছে।","err")}},e=>msg("Location পাওয়া যায়নি: "+(e.message||"Permission দিন।"),"err"),{enableHighAccuracy:true,timeout:15000,maximumAge:30000})}
-start.onclick=async()=>{if(sharing)return;if(!navigator.geolocation){msg("এই ব্রাউজারে Location support নেই।","err");return}msg("Location permission চাইছে…");navigator.geolocation.getCurrentPosition(async pos=>{sharing=true;start.disabled=true;try{const o=await post("location_update",{lat:pos.coords.latitude,lng:pos.coords.longitude,accuracy:Math.round(pos.coords.accuracy||0)});if(!o.ok)throw Error(o.message);msg("Live Location চালু আছে।","ok");timer=setInterval(sendLocation,60000)}catch(e){sharing=false;start.disabled=false;msg(e.message||"Location update ব্যর্থ হয়েছে।","err")}},e=>msg("Location permission দিন এবং আবার চেষ্টা করুন।","err"),{enableHighAccuracy:true,timeout:15000,maximumAge:0})};
-stop.onclick=async()=>{if(timer)clearInterval(timer);timer=null;try{const o=await post("location_stop");if(!o.ok)throw Error(o.message);sharing=false;start.disabled=false;msg("Live Location বন্ধ করা হয়েছে।")}catch(e){msg(e.message||"Location বন্ধ করা যায়নি।","err")}};
+function digits(v){return String(v||"").replace(/\D/g,"").slice(-10)}
+function showMember(){if(member){document.getElementById("name").textContent=member.name||member.wazeen_id||member.member_id||"Member";loginBox.style.display="none";start.disabled=false}else{document.getElementById("name").textContent="Member Login প্রয়োজন";loginBox.style.display="block";start.disabled=true;msg("আগে Member Login করুন।")}}
+async function login(){
+ loginBtn.disabled=true;loginBtn.textContent="Login হচ্ছে...";
+ try{
+  const id=document.getElementById("loginId").value.trim(),mobile=digits(document.getElementById("loginMobile").value);
+  if(!id||mobile.length!==10)throw Error("Member ID ও ১০ সংখ্যার Registered Mobile Number দিন।");
+  let r=await (await fetch(window.WEFS_MEMBER_API,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},body:new URLSearchParams({action:"member_login",id,mobile})})).json();
+  if(!r.ok||!r.record){
+   r=await (await fetch(window.WEFS_MEMBER_API+"?action=member_verify&id="+encodeURIComponent(id))).json();
+   if(!r.found||!r.record)throw Error(r.message||"Member পাওয়া যায়নি।");
+   if(String(r.record.status||"").toUpperCase()!=="APPROVED"||digits(r.record.mobile)!==mobile)throw Error("Member ID অথবা Registered Mobile Number সঠিক নয়।");
+   r={ok:true,record:r.record};
+  }
+  if(!r.record||!(r.record.wazeen_id||r.record.member_id))throw Error("Member data পাওয়া যায়নি।");
+  member=r.record;sessionStorage.setItem("wefs_member",JSON.stringify(member));showMember();msg("Login সফল। এখন Live Location চালু করুন।","ok");
+ }catch(e){msg(e.message||"Login ব্যর্থ হয়েছে।","err")}finally{loginBtn.disabled=false;loginBtn.textContent="Login করে Live Location চালু করুন"}
+}
+async function post(action,extra={}){
+ const id=member&&(member.wazeen_id||member.member_id);
+ if(!id)throw Error("Member Login প্রয়োজন।");
+ const r=await fetch(window.WEFS_LOCATION_API,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},body:new URLSearchParams({action,id:id,name:member.name||"",mobile:member.mobile||"",...extra})});
+ return r.json();
+}
+function sendLocation(){
+ if(!navigator.geolocation)return msg("এই মোবাইলে Location support নেই।","err");
+ navigator.geolocation.getCurrentPosition(async p=>{
+  try{
+   const o=await post("update",{lat:p.coords.latitude,lng:p.coords.longitude,accuracy:Math.round(p.coords.accuracy||0)});
+   if(!o.ok)throw Error(o.message||"Update failed");
+   msg("Location চালু আছে • শেষ update: "+new Date().toLocaleString("bn-IN"),"ok");
+  }catch(e){msg(e.message||"Location update ব্যর্থ হয়েছে।","err")}
+ },e=>msg("Location পাওয়া যায়নি: "+(e.message||"Permission দিন।"),"err"),{enableHighAccuracy:true,timeout:15000,maximumAge:30000})
+}
+loginBtn.onclick=login;
+showMember();
+start.onclick=async()=>{
+ if(sharing)return;
+ if(!navigator.geolocation)return msg("এই ব্রাউজারে Location support নেই।","err");
+ msg("Location permission চাইছে…");
+ navigator.geolocation.getCurrentPosition(async pos=>{
+  try{
+   const o=await post("update",{lat:pos.coords.latitude,lng:pos.coords.longitude,accuracy:Math.round(pos.coords.accuracy||0)});
+   if(!o.ok)throw Error(o.message||"Update failed");
+   sharing=true;start.disabled=true;msg("Live Location চালু আছে।","ok");timer=setInterval(sendLocation,60000);
+  }catch(e){msg(e.message||"Location update ব্যর্থ হয়েছে।","err")}
+ },e=>msg("Location permission দিন এবং আবার চেষ্টা করুন।","err"),{enableHighAccuracy:true,timeout:15000,maximumAge:0})
+};
+stop.onclick=async()=>{
+ if(timer)clearInterval(timer);timer=null;
+ try{const o=await post("stop");if(!o.ok)throw Error(o.message||"Stop failed");sharing=false;start.disabled=false;msg("Live Location বন্ধ করা হয়েছে।")}catch(e){msg(e.message||"Location বন্ধ করা যায়নি।","err")}
+};
 </script></body></html>
