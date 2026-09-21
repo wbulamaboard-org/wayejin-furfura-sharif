@@ -31,7 +31,7 @@ async function login(){
 async function post(action,extra={}){
  const id=member&&(member.wazeen_id||member.member_id);
  if(!id)throw Error("Member Login প্রয়োজন।");
- const r=await fetch(window.WEFS_LOCATION_API,{method:"POST",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:JSON.stringify({action,id:id,name:member.name||"",mobile:member.mobile||"",...extra})});
+ const r=await fetch(window.WEFS_LOCATION_API,{method:"POST",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:JSON.stringify({action,member_id:id,name:member.name||"",mobile:member.mobile||"",...extra})});
  return r.json();
 }
 function sendLocation(){
